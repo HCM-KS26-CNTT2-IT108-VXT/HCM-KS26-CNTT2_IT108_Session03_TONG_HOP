@@ -1,0 +1,30 @@
+Bài 2: Phân tích hiệu năng hệ thống và quản lý đường dẫn tệp
+Báo cáo phân tích:
+
+Giải thích tại sao đường dẫn tuyệt đối gây lỗi khi đổi máy. Phân tích luồng IPO của ứng dụng từ lúc nạp từ Storage vào RAM.
+
+Vì đường dẫn tuyệt đối chứa tên ổ đĩa và thư mục cụ thể của máy người viết nên khi chuyển sang máy bạn thân, thư mục C:\Users\Nam có thể không tồn tại hoặc không giống với máy ban đầu, dẫn đến chương trình không tìm thấy tệp và gây ra lỗi.
+
+Luồng IPO của ứng dụng từ lúc nạp từ Storage vào RAM:
+
+Storage (ổ đĩa): Lưu trữ chương trình và dữ liệu.
+
+Input: Nạp chương trình và dữ liệu từ Storage vào RAM.
+
+Process: CPU lấy dữ liệu từ RAM để xử lý.
+
+Output: Hiển thị giao diện hoặc kết quả cho người dùng.
+
+Giải pháp kỹ thuật:
+
+Viết lại cấu trúc đường dẫn tương đối, sử dụng ký hiệu . và .. để chương trình không phụ thuộc vào đường dẫn cụ thể của từng máy.
+
+./assets/logo.png
+
+Đề xuất 3 bước xử lý để giảm lag cho máy bạn thân dựa trên Task Manager:
+
+Đóng các ứng dụng không cần thiết đang chiếm nhiều RAM.
+
+Tắt các ứng dụng chạy nền/Startup không cần thiết.
+
+Đóng bớt tab trình duyệt và các chương trình nặng, sau đó mở lại dự án.
