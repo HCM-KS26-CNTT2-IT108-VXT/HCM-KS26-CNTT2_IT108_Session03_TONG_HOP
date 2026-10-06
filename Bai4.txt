@@ -1,0 +1,22 @@
+Session 03 – BTTH4: Phân tích và thiết kế lưu trữ
+Phần 1: Phân tích
+Máy có RAM 8GB nhưng lại mở khoảng 20 tab Chrome cùng lúc với VS Code nên RAM sẽ bị chiếm khá nhiều. Có thể vào Task Manager để xem mục Memory và CPU.
+Nếu Memory lên cao, khoảng 90% trở lên thì RAM gần đầy. Lúc đó Windows có thể dùng một phần SSD làm Swap file để chứa tạm dữ liệu. SSD nhanh hơn HDD nhưng vẫn chậm hơn RAM nên máy sẽ dễ bị đứng hoặc phản hồi chậm.
+CPU thì có nhiệm vụ xử lý các chương trình đang chạy. Nếu %CPU cao thì có thể do Chrome, VS Code hoặc một chương trình nào đó đang sử dụng nhiều CPU.
+Em hiểu đơn giản là:
+RAM giống như bàn làm việc, những thứ đang làm thì để trên bàn.
+Storage giống như ngăn tủ, dùng để cất dữ liệu và lấy ra khi cần.
+CPU giống như người ngồi làm việc và xử lý những thứ trên bàn.
+Ngoài ra, việc để code ở C:\Windows\System32\Code của tôi là không nên. System32 là thư mục quan trọng của Windows, nên để code ở đó vừa khó quản lý vừa có thể gây ảnh hưởng đến hệ thống. Em sẽ chuyển project sang ổ D: để dễ quản lý hơn.
+Phần 2: Sắp xếp lại thư mục
+Em sẽ tạo thư mục trên ổ D: như sau:
+D:\ ptit-projects\python-project\ source-code\assets\documents\backups\
+
+source-code: để code Python.
+assets: để hình ảnh và các file dùng cho project.
+documents: để tài liệu của project.
+backups: để lưu bản sao khi cần.
+Các tên thư mục đều dùng kebab-case, tức là viết thường và dùng dấu - để nối các từ.
+
+Nhận xét
+Theo em, vấn đề của máy không phải do SSD 256GB mà chủ yếu là RAM 8GB phải chạy quá nhiều chương trình cùng lúc. Còn việc lưu code trong System32 là do chọn sai vị trí lưu. Chuyển project sang ổ D: và chia thư mục rõ ràng sẽ dễ làm việc hơn.

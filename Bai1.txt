@@ -1,0 +1,88 @@
+BTTH1 - Session 03
+1. Phân tích vấn đề
+1.1. Vị trí lưu trữ
+
+Nam lưu bài tập tại:
+
+C:\Windows\System32\Bai Tap Cua Nam\Session 01\bai tap 1.py
+
+Cách lưu này không hợp lý vì System32 là thư mục chứa các file quan trọng của Windows. Không nên lưu bài tập cá nhân tại đây vì có thể ảnh hưởng đến hệ thống hoặc xóa nhầm file.
+
+Nên tạo thư mục riêng trên ổ D: để lưu dữ liệu học tập.
+
+1.2. Cách đặt tên
+
+Các tên như Bai Tap Cua Nam và bai tap 1.py chưa thống nhất và có khoảng trắng.
+
+Nên sử dụng kebab-case, ví dụ:
+
+bai-tap-cua-nam
+session-01
+bai-tap-01.py
+1.3. Tốc độ mạng
+
+Nam sử dụng mạng 100 Mbps nhưng tải file với tốc độ khoảng 12.5 MB/s và cho rằng nhà mạng cung cấp sai tốc độ.
+
+Thực tế:
+
+100 Mbps / 8 = 12.5 MB/s
+
+Do 1 Byte = 8 bit nên 100 Mbps tương đương khoảng 12.5 MB/s. Vì vậy tốc độ này là bình thường.
+
+1.4. Dung lượng SSD 256 GB
+
+SSD được ghi là 256 GB nhưng khi sử dụng thực tế sẽ thấy dung lượng thấp hơn.
+
+Nguyên nhân là nhà sản xuất và hệ điều hành có cách tính dung lượng khác nhau. Ngoài ra, một phần dung lượng được sử dụng cho việc định dạng và quản lý ổ đĩa.
+
+Vì vậy SSD 256 GB hiển thị thấp hơn 256 GB là bình thường.
+
+2. Thiết kế cây thư mục
+
+Em đề xuất lưu bài tập trên ổ D::
+
+D:\
+└── ptit\
+    └── it108\
+        ├── session-01\
+        │   ├── bai-tap-01.py
+        │   └── bai-tap-02.py
+        │
+        ├── session-02\
+        │   ├── bai-tap-01.py
+        │   └── bai-tap-02.py
+        │
+        └── session-03\
+            ├── bai-tap-01.py
+            └── bai-tap-02.py
+Giải thích
+ptit: thư mục học tập.
+it108: thư mục của môn học.
+session-01, session-02, session-03: chia bài theo từng buổi.
+File sử dụng tên dạng kebab-case để thống nhất và dễ tìm.
+
+Cách sắp xếp này giúp dữ liệu học tập không bị lẫn với file hệ thống và dễ quản lý hơn.
+
+3. Quy đổi đơn vị
+Dung lượng
+1 Byte = 8 bit
+1 KB = 1024 Byte
+1 MB = 1024 KB
+1 GB = 1024 MB
+Tốc độ mạng
+100 Mbps / 8 = 12.5 MB/s
+
+Vì vậy mạng 100 Mbps có tốc độ tải lý thuyết khoảng 12.5 MB/s.
+
+4. Naming Convention
+
+Sử dụng kebab-case:
+
+session-01
+bai-tap-01.py
+bai-tap-02.py
+
+Không nên đặt:
+
+Bai Tap 1.py
+Bai Tap Cua Nam

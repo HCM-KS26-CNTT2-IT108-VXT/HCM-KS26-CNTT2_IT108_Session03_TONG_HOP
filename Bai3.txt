@@ -1,0 +1,56 @@
+Bài 3: Thiết kế hệ thống IoT thông minh và quản lý cấu hình
+Thiết kế kiến trúc:
+
+Mô tả chi tiết 4 tầng DIKW của hệ thống trang trại thông minh:
+
+1. Data (Dữ liệu)
+
+Hệ thống sử dụng các cảm biến để thu thập dữ liệu môi trường trong trang trại, cụ thể là dữ liệu nhiệt độ 45°C và 25°C.
+
+→ Dữ liệu ban đầu được ghi nhận từ các cảm biến và gửi về hệ thống để phân tích.
+
+2. Information (Thông tin)
+
+Từ dữ liệu thu thập được, hệ thống phân tích và xác định:
+
+Nhiệt độ cao nhất là 45°C, vượt quá mức nhiệt độ an toàn 30°C.
+
+Nhiệt độ thấp nhất là 25°C.
+
+→ Qua đó, hệ thống nhận biết trang trại đang có sự chênh lệch nhiệt độ và có thời điểm nhiệt độ tăng cao, có thể ảnh hưởng đến cây trồng.
+
+3. Knowledge (Kiến thức)
+
+Dựa trên thông tin đã phân tích, hệ thống cần đưa ra giải pháp để hạ nhiệt độ và đưa môi trường về mức ổn định.
+
+Ví dụ:
+
+Tưới nước để làm giảm nhiệt độ.
+
+Sử dụng hệ thống phun sương trong khoảng 30 phút.
+
+Sau khi thực hiện, cảm biến tiếp tục đo nhiệt độ để kiểm tra tình hình và điều chỉnh nếu cần thiết.
+
+→ Mục tiêu là đưa nhiệt độ về mức phù hợp, hạn chế ảnh hưởng đến cây trồng.
+
+4. Wisdom (Trí tuệ)
+
+Hệ thống tối ưu hóa hành động dựa trên dự báo thời tiết dài hạn và dữ liệu thu thập được trong quá khứ, nhằm tránh tưới nước lãng phí hoặc gây ảnh hưởng xấu đến cây trồng.
+
+Ví dụ: Nếu kết hợp dữ liệu dự báo thời tiết và nhận thấy sắp có một đợt nắng nóng kéo dài 3 ngày, hệ thống có thể chủ động điều chỉnh lịch phun sương:
+
+Rút ngắn thời gian mỗi lần phun sương.
+
+Chia thành nhiều lần phun trong ngày.
+
+Chủ động tích trữ nguồn nước trước khi thời tiết nắng nóng kéo dài.
+
+Theo dõi liên tục nhiệt độ và độ ẩm để tự động điều chỉnh lượng nước phù hợp.
+
+→ Cách này giúp duy trì nhiệt độ và độ ẩm ổn định cho cây trồng, đồng thời tránh lãng phí nước và hạn chế tình trạng tưới quá nhiều gây ngập úng, ảnh hưởng đến rễ cây.
+
+Sơ đồ 4 tầng DIKW:
+
+Data → Information → Knowledge → Wisdom
+
+Cảm biến thu thập dữ liệu → Phân tích dữ liệu → Đưa ra giải pháp → Tự động tối ưu hóa hành động
