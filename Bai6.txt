@@ -1,0 +1,431 @@
+BÀI 6: THIẾT KẾ HỆ THỐNG ỨNG DỤNG THEO MÔ HÌNH DIKW VÀ QUẢN LÝ TỆP CẤU HÌNH 
+
+1. Mô hình DIKW của ứng dụng MoMo-Lite 
+
+Có thể mô tả chuỗi xử lý: 
+
+DATA → INFORMATION → KNOWLEDGE → WISDOM 
+
+ Dữ liệu → Thông tin → Kiến thức → Trí tuệ 
+
+1.1. Data – Dữ liệu 
+
+Hệ thống thu thập dữ liệu giao dịch của người dùng. 
+
+Ví dụ: 
+
+- Số tiền giao dịch: 200.000 VNĐ 
+
+- Thời gian: 08:30 
+
+- Loại giao dịch: Ăn uống 
+
+- Địa điểm: Cửa hàng A 
+
+- Phương thức: Ví điện tử 
+
+Đây là dữ liệu thô, chưa đưa ra kết luận về tình hình tài chính. 
+
+ 
+
+1.2. Information – Thông tin 
+
+MoMo-Lite tổng hợp dữ liệu giao dịch thành các báo cáo có ý nghĩa. 
+
+Ví dụ trong tháng: 
+
+Ăn uống:       2.000.000 VNĐ 
+
+Mua sắm:       1.500.000 VNĐ 
+
+Di chuyển:       800.000 VNĐ 
+
+Giải trí:        700.000 VNĐ 
+
+-------------------------------- 
+
+Tổng cộng:     5.000.000 VNĐ 
+
+Ứng dụng có thể hiển thị: 
+
+Tổng chi tiêu tháng này: 5.000.000 VNĐ. 
+
+Dữ liệu giao dịch riêng lẻ đã được chuyển thành thông tin tổng hợp. 
+
+ 
+
+1.3. Knowledge – Kiến thức 
+
+Hệ thống phân tích thông tin và áp dụng các quy tắc để phát hiện vấn đề. 
+
+Ví dụ: 
+
+Ngân sách ăn uống: 1.500.000 VNĐ 
+
+Chi tiêu thực tế:  2.000.000 VNĐ 
+
+Hệ thống nhận thấy: 
+
+2.000.000 > 1.500.000 
+
+→ Gửi cảnh báo: 
+
+Cảnh báo: Chi tiêu ăn uống đã vượt ngân sách tháng. 
+
+Như vậy hệ thống đã sử dụng dữ liệu và thông tin để phát hiện một tình huống cần chú ý. 
+
+ 
+
+1.4. Wisdom – Trí tuệ 
+
+Ở tầng cao nhất, hệ thống sử dụng lịch sử chi tiêu, xu hướng và mục tiêu tài chính để đưa ra gợi ý phù hợp. 
+
+Ví dụ: 
+
+Chi tiêu ăn uống thường xuyên cao 
+
++ 
+
+Người dùng muốn tiết kiệm 2.000.000 VNĐ/tháng 
+
++ 
+
+Lịch sử cho thấy có thể giảm một số khoản không cần thiết 
+
+        ↓ 
+
+Đề xuất kế hoạch tiết kiệm 
+
+Ứng dụng có thể gợi ý: 
+
+Đặt ngân sách cho từng nhóm chi tiêu. 
+
+Giảm các khoản chi không cần thiết. 
+
+Đặt mục tiêu tiết kiệm hàng tháng. 
+
+Theo dõi tiến độ tiết kiệm. 
+
+Wisdom không chỉ cảnh báo mà còn hỗ trợ người dùng đưa ra quyết định tốt hơn. 
+
+ 
+
+2. Sơ đồ DIKW của MoMo-Lite 
+
+┌─────────────────────────────────┐ 
+
+│ DATA – DỮ LIỆU                  │ 
+
+│ Các giao dịch: số tiền, thời   │ 
+
+│ gian, loại giao dịch...         │ 
+
+└───────────────┬─────────────────┘ 
+
+                ↓ 
+
+┌─────────────────────────────────┐ 
+
+│ INFORMATION – THÔNG TIN         │ 
+
+│ Tổng hợp chi tiêu theo ngày,    │ 
+
+│ tuần, tháng và danh mục.        │ 
+
+└───────────────┬─────────────────┘ 
+
+                ↓ 
+
+┌─────────────────────────────────┐ 
+
+│ KNOWLEDGE – KIẾN THỨC           │ 
+
+│ Phân tích ngân sách và phát     │ 
+
+│ hiện chi tiêu vượt mức.         │ 
+
+└───────────────┬─────────────────┘ 
+
+                ↓ 
+
+┌─────────────────────────────────┐ 
+
+│ WISDOM – TRÍ TUỆ                │ 
+
+│ Gợi ý kế hoạch tiết kiệm và     │ 
+
+│ tối ưu hóa chi tiêu.            │ 
+
+└───────────────┬─────────────────┘ 
+
+                ↓ 
+
+       QUYẾT ĐỊNH TÀI CHÍNH 
+
+ 
+
+3. Module Input – Process – Output 
+
+3.1. Input – Đầu vào 
+
+Các dữ liệu được đưa vào hệ thống: 
+
+Thông tin giao dịch. 
+
+Số tiền. 
+
+Thời gian giao dịch. 
+
+Loại chi tiêu. 
+
+Dữ liệu ngân sách. 
+
+Mục tiêu tiết kiệm của người dùng. 
+
+Ví dụ: 
+
+Input: 
+
+200.000 VNĐ 
+
+Ăn uống 
+
+08:30 
+
+ 
+
+3.2. Process – Xử lý 
+
+Hệ thống thực hiện: 
+
+Kiểm tra và lưu giao dịch. 
+
+Phân loại giao dịch. 
+
+Tổng hợp chi tiêu. 
+
+So sánh với ngân sách. 
+
+Phân tích xu hướng. 
+
+Tạo cảnh báo. 
+
+Đưa ra gợi ý tiết kiệm. 
+
+Có thể biểu diễn: 
+
+Input 
+
+  ↓ 
+
+Kiểm tra dữ liệu 
+
+  ↓ 
+
+Lưu trữ 
+
+  ↓ 
+
+Phân loại 
+
+  ↓ 
+
+Phân tích 
+
+  ↓ 
+
+Ra quyết định 
+
+ 
+
+3.3. Output – Đầu ra 
+
+Kết quả hệ thống cung cấp cho người dùng: 
+
+Lịch sử giao dịch. 
+
+Báo cáo chi tiêu tháng. 
+
+Cảnh báo vượt ngân sách. 
+
+Biểu đồ chi tiêu. 
+
+Gợi ý kế hoạch tiết kiệm. 
+
+Ví dụ: 
+
+Tổng chi tiêu: 5.000.000 VNĐ 
+
+Ăn uống: 2.000.000 VNĐ 
+
+Mua sắm: 1.500.000 VNĐ 
+
+ 
+
+⚠ Cảnh báo: 
+
+Chi tiêu ăn uống đã vượt ngân sách. 
+
+ 
+
+→ Gợi ý: 
+
+Điều chỉnh ngân sách ăn uống tháng sau. 
+
+ 
+
+4. Tính dung lượng lưu trữ 
+
+Đề bài cho: 
+
+1 giao dịch = 1 KB 
+
+1 ngày = 1.000.000 giao dịch 
+
+Dung lượng mỗi ngày: 
+
+1 KB × 1.000.000 
+
+= 1.000.000 KB 
+
+Đổi sang MB theo hệ số 1024: 
+
+1.000.000 ÷ 1024 
+
+≈ 976,56 MB 
+
+Kết quả: 
+
+Mỗi ngày cần khoảng 976,56 MB dữ liệu. 
+
+Tương đương khoảng: 
+
+0,95 GB/ngày. 
+
+Đây là dung lượng dữ liệu thô theo giả định đề bài, chưa tính metadata, chỉ mục, bản sao lưu, log và phần overhead của hệ thống cơ sở dữ liệu. 
+
+ 
+
+5. Quản lý file cấu hình .env 
+
+Các mã API hoặc thông tin cấu hình nhạy cảm có thể được lưu trong: 
+
+.env 
+
+Ví dụ: 
+
+API_KEY=your-secret-key 
+
+API_URL=your-api-url 
+
+File .env có thể bị Windows ẩn tùy cách hiển thị file. 
+
+Để xem file ẩn trong Windows: 
+
+File Explorer 
+
+→ View 
+
+→ Show 
+
+→ Hidden items 
+
+Lưu ý bảo mật 
+
+Không nên đưa .env chứa API key hoặc thông tin bí mật lên GitHub. 
+
+Có thể thêm: 
+
+.env 
+
+vào .gitignore. 
+
+Ví dụ: 
+
+MoMo-Lite/ 
+
+├── .env 
+
+├── .gitignore 
+
+├── src/ 
+
+│   └── main.py 
+
+└── README.md 
+
+.env chứa cấu hình bí mật, còn .gitignore giúp Git bỏ qua file này khi commit. 
+
+ 
+
+6. Vai trò của SoC 
+
+SoC (System on Chip) tích hợp nhiều thành phần xử lý trên một chip. 
+
+Trong hệ thống MoMo-Lite, thiết bị sử dụng SoC có thể đảm nhiệm: 
+
+Input 
+
+↓ 
+
+Cảm biến / thiết bị 
+
+↓ 
+
+SoC 
+
+↓ 
+
+Xử lý dữ liệu 
+
+↓ 
+
+Kết nối mạng 
+
+↓ 
+
+Server / Cloud 
+
+↓ 
+
+Output 
+
+Ưu điểm của SoC: 
+
+Tích hợp nhiều chức năng trên một chip. 
+
+Tiết kiệm không gian. 
+
+Tiết kiệm năng lượng. 
+
+Phù hợp với thiết bị di động và IoT. 
+
+Có thể xử lý một phần dữ liệu ngay tại thiết bị. 
+
+ 
+
+7. Kết luận 
+
+Ứng dụng MoMo-Lite có thể áp dụng mô hình DIKW như sau: 
+
+Tầng 
+
+Ứng dụng 
+
+Data 
+
+Thu thập giao dịch, số tiền, thời gian, loại chi tiêu 
+
+Information 
+
+Tổng hợp và báo cáo chi tiêu 
+
+Knowledge 
+
+Phân tích và cảnh báo khi vượt ngân sách 
+
+Wisdom 
+
+Gợi ý kế hoạch tiết kiệm và tối ưu chi tiêu 
+
+ 
